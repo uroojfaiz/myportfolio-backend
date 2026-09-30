@@ -42,8 +42,10 @@ app.use('/api/testimonials', testimonialRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-// Local dev: start a normal server.
-// On Vercel: the exported app is used directly as a serverless function.
+app.get("/", (req, res) => {
+  res.send("Server is running successfully!");
+});
+
 if (require.main === module) {
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }
