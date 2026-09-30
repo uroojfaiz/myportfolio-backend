@@ -16,7 +16,7 @@ const testimonialRoutes = require('./routes/testimonials');
 
 const app = express();
 
-app.use(cors()); // if you want to restrict later: cors({ origin: 'https://yourportfolio.vercel.app' })
+app.use(cors({origin: "https://myportfolio-backend-unsu.vercel.app"})); // if you want to restrict later: cors({ origin: 'https://yourportfolio.vercel.app' })
 app.use(express.json({ limit: '1mb' }));
 
 app.get('/api/health', (req, res) => res.json({ ok: true }));
